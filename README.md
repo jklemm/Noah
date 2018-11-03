@@ -116,13 +116,13 @@ Each task has a default, basic-usage example, which will likely need to be modif
 ```js
 // Theme
 NOAH.sass({
-    src : 'assets/styles/themes/internal.scss',
+    src : 'source/styles/themes/internal.scss',
     dest: 'public/styles/internal.css'
 });
 
 // Print
 NOAH.sass({
-    src : 'assets/styles/themes/print.scss',
+    src : 'source/styles/themes/print.scss',
     dest: 'public/styles/print.css'
 });
 ```
@@ -175,5 +175,5 @@ This helper module is used to get an array of files from a specified directory.
 
 ```js
 var filePaths = require('./file-paths').filePaths;
-var components = filePaths('assets/_js/components/'); // returns all files in this directory
+var components = filePaths('source/_js/components/'); // returns all files in this directory
 ```

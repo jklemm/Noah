@@ -6,6 +6,6 @@ var NOAH = NOAH || {};
 NOAH.copy = require('../modules/copy').NOAH;
 
 NOAH.copy({
-    src : 'assets/images/', 
+    src : 'source/images/', 
     dest: 'dist/images/'
 });

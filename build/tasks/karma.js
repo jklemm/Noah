@@ -7,8 +7,8 @@ NOAH.test = require('../modules/karma').NOAH;
 
 NOAH.test({
     files: [
-        'assets/vendor/**/*.js',
-        'assets/js/*.js',
+        'source/vendor/**/*.js',
+        'source/js/*.js',
         'test/js/*.test.js'
     ],
     singlerun: true

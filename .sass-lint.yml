@@ -1,8 +1,8 @@
 files:
   include: 
-    - assets/**/*.scss
+    - source/**/*.scss
   ignore:
-    - assets/vendor/**/*.scss
+    - source/vendor/**/*.scss
 
 options:
   formatter: stylish

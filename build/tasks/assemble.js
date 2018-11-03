@@ -13,16 +13,16 @@ var app = assemble({
     layout: 'core.hbs'
 });
 
-// Set the assets directory
-app.data('assets', '../');
+// Set the source directory
+app.data('source', '../');
 
 // Register handlebars helpers
 app.helpers(helpers());
 app.helper('repeat', repeat);
 
 app.file = function(file) {
-  app.partials('assets/templates/partials/**/*.hbs');
-  app.layouts('assets/templates/layouts/**/*.hbs');
+  app.partials('source/templates/partials/**/*.hbs');
+  app.layouts('source/templates/layouts/**/*.hbs');
   app.src(file)
     .pipe(app.renderFile('hbs'))
     .pipe(extname('.html'))
@@ -30,7 +30,7 @@ app.file = function(file) {
 }
 
 app.task('app', function() {
-  app.file('assets/templates/pages/**/*.hbs');
+  app.file('source/templates/pages/**/*.hbs');
 });
 
 module.exports = app;

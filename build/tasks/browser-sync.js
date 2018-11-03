@@ -29,29 +29,29 @@ NOAH.serve({
 });
 
 // Watch Sass files
-bs.watch('assets/scss/**/*.scss', function(event, file) {
+bs.watch('source/scss/**/*.scss', function(event, file) {
     if (event === 'change') {
       NOAH.sass({
-          src : 'assets/scss/example.scss',
+          src : 'source/scss/example.scss',
           dest: 'dist/css/example.css'
       });
     }
 });
 
 // Watch JS files
-bs.watch('assets/js/**/*.js', function(event, file) {
+bs.watch('source/js/**/*.js', function(event, file) {
     var filename = file.replace(/^.*[\\\/]/, '').replace(/\..+$/, '');
     if (event === 'change') {
         NOAH.test({
             files: [
-                'assets/vendor/**/*.js',
-                'assets/js/*.js',
+                'source/vendor/**/*.js',
+                'source/js/*.js',
                 'test/js/' + filename + '.test.js'
             ],
             singlerun: false
         });
         NOAH.concat({
-            src : filePaths('assets/js/'),
+            src : filePaths('source/js/'),
             dest: 'dist/js/example.js'
         });
         NOAH.uglify({
@@ -62,7 +62,7 @@ bs.watch('assets/js/**/*.js', function(event, file) {
 });
 
 // Watch HBS files
-bs.watch('assets/templates/**/*.hbs', function(event, file) {
+bs.watch('source/templates/**/*.hbs', function(event, file) {
     if (event === 'change') {
       app.file(file);
     }

@@ -39,7 +39,7 @@
     "clean"      : "node ./build/tasks/clean.js",
     "concat"     : "node ./build/tasks/concat.js",
     "copy"       : "node ./build/tasks/copy.js",
-    "jshint"     : "./node_modules/jshint/bin/jshint assets/js/*.js --exclude assets/vendor/**/* --reporter=node_modules/jshint-stylish",
+    "jshint"     : "./node_modules/jshint/bin/jshint source/js/*.js --exclude source/vendor/**/* --reporter=node_modules/jshint-stylish",
     "postcss"    : "node ./build/tasks/postcss.js",
     "sass"       : "node ./build/tasks/sass.js",
     "scsslint"   : "./node_modules/sass-lint/bin/sass-lint.js -v",
